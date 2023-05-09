@@ -10,7 +10,6 @@ export class SalesApiStack extends cdk.Stack {
 
     const createSaleHandler = createSaleLambda(scope)
     const salesApi = createSalesApi(scope, createSaleHandler)
-    
 
     // The code that defines your stack goes here
 
