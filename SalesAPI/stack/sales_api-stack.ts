@@ -5,12 +5,11 @@ import { createSalesApi } from './apiGateway'
 // import * as sqs from 'aws-cdk-lib/aws-sqs';
 
 export class SalesApiStack extends cdk.Stack {
-  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
+  constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    const createSaleHandler = createSaleLambda(scope)
-    const salesApi = createSalesApi(scope, createSaleHandler)
-    
+    const createSaleHandler = createSaleLambda(this)
+    createSalesApi(this, createSaleHandler)
 
     // The code that defines your stack goes here
 
