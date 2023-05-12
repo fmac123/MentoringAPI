@@ -1,0 +1,18 @@
+{
+  "name": "sales-lambdas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "createSale.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-sns": "^3.332.0",
+    "aws-lambda": "1.0.7",
+    "aws-sdk": "2.1350.0",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.21"
+  }
+}
