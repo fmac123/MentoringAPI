@@ -1,8 +1,7 @@
 import { APIGatewayProxyEvent } from "aws-lambda";
 import { randomUUID } from "crypto";
 import { saleProcessedEvent } from "./models/saleEvent";
-import { SNSClient } from "@aws-sdk/client-sns"
-import {PublishCommand } from "@aws-sdk/client-sns";
+import { SNSClient, PublishCommand } from "@aws-sdk/client-sns"
 
 export async function main(event: APIGatewayProxyEvent) {
     const newSale: saleProcessedEvent  = {
