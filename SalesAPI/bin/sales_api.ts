@@ -4,7 +4,7 @@ import * as cdk from 'aws-cdk-lib';
 import { SalesApiStack } from '../stack/sales_api-stack';
 
 const app = new cdk.App();
-new SalesApiStack(app, 'SalesApiStack', {
+new SalesApiStack(app, 'Fraser-SalesApiStack', {
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere. */

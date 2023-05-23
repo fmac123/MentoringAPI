@@ -1,7 +1,6 @@
 import * as apiGateway from "aws-cdk-lib/aws-apigateway"
 import { Construct } from "constructs";
 import * as lambda from "aws-cdk-lib/aws-lambda"
-import * as cdk from "@aws-cdk/core"
 
 
 export function createSalesApi(scope: Construct, handler: lambda.Function): apiGateway.RestApi {
