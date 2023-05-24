@@ -11,7 +11,7 @@ export function createSaleLambda(scope: Construct): NodejsFunction {
       runtime: lambda.Runtime.NODEJS_18_X,
       entry: "./src/handlers/createSale.ts",
       handler: "main",
-      onSuccess: new destinations.SqsDestination(salesQueue),
+      // onSuccess: new destinations.SqsDestination(salesQueue),
   })
 
 }

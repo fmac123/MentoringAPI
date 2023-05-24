@@ -21,7 +21,7 @@ try {
     return {
         statusCode: 500,
         body: JSON.stringify({
-            message: "Failed to process sale"
+            message: `Failed to process sale ${error}`
         })}
 }
     return {
