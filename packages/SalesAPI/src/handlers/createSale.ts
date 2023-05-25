@@ -14,7 +14,7 @@ export async function main(event: APIGatewayProxyEvent) {
 
 try {
     await snsClient.send(new PublishCommand({
-        TopicArn: "",
+        TopicArn: process.env.SALES_TOPIC_ARN,
         Message: JSON.stringify(newSale)
     }))
 } catch (error) {
