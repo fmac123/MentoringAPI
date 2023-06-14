@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
-import { SalesApiStack } from '../stack/sales_api-stack';
+import { SalesApiStack } from './salesApiStack';
 
 const app = new cdk.App();
 new SalesApiStack(app, 'Fraser-SalesApiStack', {
