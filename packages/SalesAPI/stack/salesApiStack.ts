@@ -18,9 +18,6 @@ export class SalesApiStack extends cdk.Stack {
     const saleLambda = createSaleLambda(this, topic.topicArn)
     createSalesApi(this, saleLambda)
 
-
-
-
     new cdk.CfnOutput(this, 'salesTopicArn', {
       value: topic.topicArn,
       exportName: SalesTopicArnCfnOutput,

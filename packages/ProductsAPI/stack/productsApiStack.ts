@@ -1,6 +1,6 @@
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
-import { createProductsTable } from '../src/handlers/endpoints/getAllProducts';
+import { createProductsTable } from './db';
 import { createGetAllProductsLambda, createSalesEventConsumerLambda } from './lambdas';
 
 export class ProductsApiStack extends cdk.Stack {

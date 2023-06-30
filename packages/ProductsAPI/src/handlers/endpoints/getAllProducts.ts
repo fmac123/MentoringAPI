@@ -1,12 +1,19 @@
 import * as dynamodb from 'aws-cdk-lib/aws-dynamodb';
 import { Construct } from 'constructs';
 import { ProductsTable } from '../../../stack/applicationConstants';
+import { APIGatewayProxyEvent } from "aws-lambda";
+import { randomUUID } from "crypto";
+import { saleProcessedEvent } from "./models/saleEvent";
+import { SNSClient, PublishCommand } from "@aws-sdk/client-sns"
+import { Product  } from '../../libs/models/product';
 
 
-export function createProductsTable(scope: Construct) {
-  new dynamodb.Table(scope, 'ProductsTable', {
-    partitionKey: { name: 'id', type: dynamodb.AttributeType.STRING },
-    billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
-    tableName: ProductsTable,
-  });
+
+export async function main(event: APIGatewayProxyEvent) {
+  const product = Product.validate(event.body)
+  if(product.success)
+    product.value.id
+    
 }
+
+

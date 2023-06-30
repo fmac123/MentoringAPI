@@ -1,1 +1,1 @@
-export const ProductsTable = 'ProductsTable';
+export const ProductsTableName = 'ProductsTable';
